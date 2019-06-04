@@ -2,15 +2,29 @@
 <html>
     <head>
         <title>Welcome page</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/index.css"/>
     </head>
     <body>
-        <h3>Welcome, <%= username %></h3>   
-        <div id="chatLog"></div>
-        <form id="myForm">
-            <input id="msgForm" type="text">
-            <input type="submit" value="Send">
-        </form>
-             
+        <div class="container login-container" >
+            <div class="row"  style = "height: 100%;">
+                <div class="col-md-6 ads">
+                    <h1><span id="fl">Company</span><span id="sl">Name</span></h1>
+                </div>
+                <div class="col-md-6 login-form">
+                    <h3>Welcome, <%= username %></h3>   
+                <div id="chatLog" style="size:100%"></div>
+                    <form id="myForm">
+                        <input id="msgForm" type="text" value="">
+                        <input type="submit" value="Send">
+                    </form>
+                        
+                </div>
+            </div>
+        </div>
+                 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="/socket.io/socket.io.js"></script>
         <script src="javascript/chat.js"></script>
