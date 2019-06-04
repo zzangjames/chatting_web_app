@@ -98,11 +98,11 @@ app.post('/register', function(req, res){
     console.log(name, pwd);
 
     //DB에 Query를 날리기
-        var sql = `INSERT INTO user_info VALUES (?, ?)`;
-        connection.query(sql, [name, pwd], function(error, results, fileds){
-            console.log(results);
-            
-        });
+    var sql = `INSERT INTO user_info VALUES (?, ?)`;
+    connection.query(sql, [name, pwd], function(error, results, fileds){
+        console.log(results);
+
+    });
 
     res.redirect('/');
 
