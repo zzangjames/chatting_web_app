@@ -96,16 +96,18 @@ app.post('/register', function(req, res){
     var pwd = req.body.pwd;
     var pwdconf = req.body.pwdconf;
     console.log(name, pwd);
-
-    //DB에 Query를 날리기
-    var sql = `INSERT INTO user_info VALUES (?, ?)`;
-    connection.query(sql, [name, pwd], function(error, results, fileds){
-        console.log(results);
-
+    var sql = 'SELECT * FROM user_info WHERE username = ?';
+    connection.query(sql, [name,pwd], function(error, data, fileds){
+        if(data.length == 0){
+            connection.query("INSERT INTO user_info VALUES(?,?)",[name,pwd],function(){
+                console.log(data);
+            })
+        }
+        else{
+            console.log("존재");
+            res.render("register.html",{alert: true});
+        }
     });
-
-    res.redirect('/');
-
 });
 
 app.get('/welcome', function ( req, res) {
