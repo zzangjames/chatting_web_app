@@ -21,17 +21,20 @@
                     <h3 style="text-align: center">Login</h3>
                     <form action="/register", method = "POST" onsubmit="return mySubmit()">
                         <div class="form-group">
-                            <p>Username : <input type="text" class="form-control" name="name" required> </p>
+                            <p>Username : <input type="text" class="form-control" name="name" required placeholder="New Username"> </p>
                         </div>
                         <div class="form-group">
-                            <p>Password : <input type="password" class="form-control" name="pwd" required> </p>
+                            <p>Password : <input type="password" class="form-control" name="pwd" required placeholder="New Password"> </p>
                         </div>
                         <div class="form-group">
-                            <p>Password Confirm: <input type="password" class="form-control" name="pwdconf" required> </p>
+                            <p>Password Confirm: <input type="password" class="form-control" name="pwdconf" required placeholder="Confirm Password"> </p>
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-primary btn-lg btn-block" value = "Register">  
                         </div>
+                    </form>
+                    <form action = "/" method = "GET">
+                        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Back">
                     </form>
                         <div class="form-group forget-password">
                             <a href="#">Forget Password</a>
