@@ -10,17 +10,14 @@
     <body>
         <div class="container login-container" >
             <div class="row"  style = "height: 100%;">
-                <div class="col-md-6 ads">
-                    <h1><span id="fl">Company</span><span id="sl">Name</span></h1>
-                </div>
-                <div class="col-md-6 login-form">
+                <div class="container userlist-form"></div>
+                <div class="container chat-form">
                     <h3>Welcome, <%= username %></h3>   
                 <div id="chatLog" style="size:100%"></div>
                     <form id="myForm">
                         <input id="msgForm" type="text" value="" placeholder="메시지를 입력해주세요..">
-                        <button style= "width: 60px; height: 35px;font-size:18px;background:gold;" type="submit">전송</button>                    
+                        <button style= "width: 60px; height: 35px;font-size:18px;background:gold;" type="submit">전송</button>             
                     </form>
-                        
                 </div>
             </div>
         </div>
