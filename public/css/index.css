@@ -22,13 +22,16 @@ body {
     padding: 10px;
     text-align: center;
     height: 600px;
-    
+    padding-top: 66.666%; /* 500px÷750px×100=66.666...% */
+    background: url("https://raw.githubusercontent.com/zzangjames/chatting_web_app/master/views/logo.jpg") no-repeat center;
+    background-size: contain;
   }
   
   .ads h1 {
     width: 30px;
     height: 500px;
-    margin-top: 20%;
+    margin-top: -450px;
+
   }
 
   .userlist-form{
@@ -39,17 +42,20 @@ body {
   }
   .chat-form{
     padding-left: 150px; 
-    overflow: auto;
     margin-top: -35em;
     margin-left: -2em;
-
+    
   }
   #fl {
-    font-weight: 600;
+    font-size:  120px;
+    white-space: nowrap;
+    color: black;
   }
   
   #sl {
-    font-weight: 100 !important;
+    font-size:  70px;
+    white-space: nowrap;
+    color: black;
   }
   
   .profile-img {
@@ -89,10 +95,58 @@ body {
 
   #chatLog{
     word-break: break-all;
-    overflow: hidden;
+    width: 580px;
+    height: 450px;
+    overflow-y: auto;
+    /*font-size: 12px;  
+    margin: auto;
+    margin-left: 230px; 
+    margin-right: 25px;  
+    background-color: lemonchiffon;
+    border-radius: 5px; 
+    margin-top: 10px; 
+    border: 2px solid gray;
+    text-align: left; */
   }
+  #other{
+    word-break: break-all;
+    overflow: hidden;
+
+    /*font-size: 12px;
+    margin: auto;
+    margin-left: 25px; 
+    margin-right: 230px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 2px solid gray;
+    text-align: left;*/
+
+  }
+
+  #connect {
+    margin: auto;
+    background-color: aquamarine;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px; 
+    border: 2px solid gray;
+  }
+
+/* 접속 종료 알림 */
+  #disconnect {
+    margin: auto;
+    background-color: indianred;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px; 
+    border: 2px solid gray;
+  }
+
   #myForm{
-    position: absolute;
-    overflow-y: scroll;
+    position: fixed;
+    padding-bottom:  -55em;
+    right:  200px;
+    top: 600px;
   }
   
