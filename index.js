@@ -101,6 +101,7 @@ app.post('/register', function(req, res){
         if(data.length == 0){
             connection.query("INSERT INTO user_info VALUES(?,?)",[name,pwd],function(){
                 console.log(data);
+                res.redirect('/');
             })
         }
         else{
