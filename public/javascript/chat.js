@@ -21,5 +21,6 @@ $(function(){
         var $msgForm = $("#msgForm");
 
         socket.emit("chat", {msg: $msgForm.val() });
+        document.getElementById('msgForm').value = ''
     });
 });

@@ -9,8 +9,9 @@ body {
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /* max-width: 50%; */
-    width: 50%;
-    height: 70%;
+    width: 700px;
+    height: 500px;
+    overflow: auto;
   }
   
   .ads {
@@ -18,12 +19,14 @@ body {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     color: #fff;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     
   }
   
   .ads h1 {
+    width: 30px;
+    height: 500px;
     margin-top: 20%;
   }
   
@@ -51,13 +54,13 @@ body {
   
   .login-form {
     padding: 15px;
-
   }
   
   .login-form h3 {
     text-align: left;
     padding-top: 15px;
     padding-bottom: 15px;
+    overflow: auto;
   }
   
   .form-control {
@@ -68,5 +71,15 @@ body {
     font-weight: 500;
     text-decoration: none;
     font-size: 14px;
+  }
+
+
+  #chatLog{
+    word-break: break-all;
+    overflow: hidden;
+  }
+  #myForm{
+    position: absolute;
+    overflow-y: scroll;
   }
   
