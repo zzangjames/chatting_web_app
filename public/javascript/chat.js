@@ -12,7 +12,8 @@ $(function(){
     });
 
     socket.on("chat", function (data){
-        $("#chatLog").append("<li><strong>" + data.username + "</strong>: " + data.msg + "</li>");
+        var date = new Date();
+        $("#chatLog").append("<li><strong>" + data.username + "</strong>: " + data.msg + " ("+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+")</li>");
     });
 
     $("#myForm").submit(function(e){
