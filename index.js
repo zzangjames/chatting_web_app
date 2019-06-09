@@ -15,7 +15,7 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    post: 3307,
+    post: 3000,
     password: '',
     database: 'my_db'
 });
@@ -29,12 +29,16 @@ connection.connect(function (err) {
 
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
-
+var array = new Array();
 io.on('connection', function(socket){
     socket.on('login', function(data){
-        console.log('client logged-in: ' + data.username);
+        array.push(data.username);
         socket.username = data.username;
+        socket.array = array;
+        console.log('client logged-in: ' + data.username);
+        console.log('sdas' + array[0]);
         io.emit('login', data.username);
+        io.emit('userlist',array);
     });
 
     socket.on('chat', function(data){
@@ -43,12 +47,18 @@ io.on('connection', function(socket){
             username: socket.username,
             msg: data.msg
         };
+        socket.broadcast.emit('chat',msg);
         io.emit('chat',msg);
     });
 
-    socket.on('disconnect', function(){
+    socket.on('disconnect', function(data){
         socket.broadcast.emit('logout', socket.username);
         console.log('user disconnected: ' + socket.username);
+        array.splice(array.indexOf(socket.username),1);
+        //delete array[array.indexOf(data.username)];
+        socket.array = array;
+        io.emit('disconnect', data.username);
+        io.emit('userlist',array);
     });
 });
 
