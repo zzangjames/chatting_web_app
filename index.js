@@ -36,7 +36,6 @@ io.on('connection', function(socket){
         socket.username = data.username;
         socket.array = array;
         console.log('client logged-in: ' + data.username);
-        console.log('sdas' + array[0]);
         io.emit('login', data.username);
         io.emit('userlist',array);
     });
@@ -47,7 +46,6 @@ io.on('connection', function(socket){
             username: socket.username,
             msg: data.msg
         };
-        socket.broadcast.emit('chat',msg);
         io.emit('chat',msg);
     });
 
