@@ -22,13 +22,16 @@ body {
     padding: 10px;
     text-align: center;
     height: 600px;
-    
+    padding-top: 66.666%; /* 500px÷750px×100=66.666...% */
+    background: url("https://raw.githubusercontent.com/zzangjames/chatting_web_app/master/views/logo.jpg") no-repeat center;
+    background-size: contain;
   }
   
   .ads h1 {
     width: 30px;
     height: 500px;
-    margin-top: 20%;
+    margin-top: -450px;
+
   }
 
   .userlist-form{
@@ -37,19 +40,35 @@ body {
     background-color: #A569BD;
     margin-left: 0px; 
   }
+
   .chat-form{
     padding-left: 150px; 
-    overflow: auto;
     margin-top: -35em;
     margin-left: -2em;
-
+    
   }
+  #par{
+    width:99px; 
+    font-size:20px;
+    margin: auto;
+    display: inline-block;
+    position: absolute;
+    background-color : #05ffb0;
+    border-radius: 5px; 
+    border: 2px solid gray;
+    text-align:center;
+  }
+
   #fl {
-    font-weight: 600;
+    font-size:  140px;
+    white-space: nowrap;
+    color: black;
   }
   
   #sl {
-    font-weight: 100 !important;
+    font-size:  90px;
+    white-space: nowrap;
+    color: black;
   }
   
   .profile-img {
@@ -89,10 +108,60 @@ body {
 
   #chatLog{
     word-break: break-all;
-    overflow: hidden;
+    width: 580px;
+    height: 450px;
+    /*font-size: 12px;  
+    margin: auto;
+    margin-left: 230px; 
+    margin-right: 25px;  
+    background-color: lemonchiffon;
+    border-radius: 5px; 
+    margin-top: 10px; 
+    border: 2px solid gray;
+    text-align: left; */
   }
-  #myForm{
+  #other{
+    word-break: break-all;
+    overflow: hidden;
+
+    /*font-size: 12px;
+    margin: auto;
+    margin-left: 25px; 
+    margin-right: 230px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 2px solid gray;
+    text-align: left;*/
+
+  }
+
+  #connect {
+    width: 100px;
+    word-break: break-word;
+    display: inline-block;
     position: absolute;
-    overflow-y: scroll;
+    font-size:15px; 
+    background-color: aquamarine;
+    text-align: center;
+    border-radius: 5px; 
+    border: 2px solid gray;
+    overflow-y: auto;
+    max-height: 600px;
+    margin-top:30px; 
+  }
+
+/* 접속 종료 알림 */
+  #disconnect {
+    margin: auto;
+    background-color: indianred;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px; 
+    border: 2px solid gray;
+  }
+
+  #myForm{
+    width:auto;
   }
   
