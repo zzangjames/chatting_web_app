@@ -1,0 +1,33 @@
+{
+  "name": "chatting_web_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron .",
+    "start": "node index.js",
+    "build": "electron-packager . Owl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moris0712/chatting_web_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moris0712/chatting_web_app/issues"
+  },
+  "homepage": "https://github.com/moris0712/chatting_web_app#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "mysql": "^2.17.1",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "electron": "^5.0.3",
+    "electron-packager": "^13.1.1"
+  }
+}
