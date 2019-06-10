@@ -15,7 +15,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  win.loadURL('https:www.naver.com')
+  win.loadURL('https:172.17.64.45:3000')
 
   // 개발자 도구를 엽니다.
   win.webContents.openDevTools()
