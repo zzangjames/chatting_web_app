@@ -1,167 +1,146 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    transition: 3s;
-  }
-  
-  .login-container {
-    margin-top: 10%;
-    border: 1px solid #CCD1D1;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* max-width: 50%; */
-    width: 700px;
-    height: 600px;
-    margin-top: 50px;
-  }
+  font-family: 'Montserrat', sans-serif;
+  transition: 3s;
+  background-image: url("https://raw.githubusercontent.com/zzangjames/chatting_web_app/master/views/background.jpg")!important;
+}
+.login-container {
+  margin-top: 10%;
+  background-color: white;
+  opacity: 0.95;
+  border: 3px solid #A569BD;
+  border-radius: 15px;
+  box-shadow: 8px 8px 13px white;
+  /* max-width: 50%; */
+  width: 700px;
+  height: 460px;
+  margin-top: 50px;
+}
 
-  .ads {
-    background-color: #A569BD;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    height: 600px;
-    padding-top: 66.666%; /* 500px÷750px×100=66.666...% */
-    background: url("https://raw.githubusercontent.com/zzangjames/chatting_web_app/master/views/logo.jpg") no-repeat center;
-    background-size: contain;
-  }
-  
-  .ads h1 {
-    width: 30px;
-    height: 500px;
-    margin-top: -450px;
+.ads {
+  background-color: rgba(28, 3, 51, 0.911);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  /* color: #fff; */
+  padding: 10px;
+  text-align: center;
+  height: 455px;
+  /* padding-top: 66.666%; 500px÷750px×100=66.666...% */
+  /* background: url("https://raw.githubusercontent.com/zzangjames/chatting_web_app/master/views/logo.jpg") no-repeat center; */
+  background-size: contain;
+}
 
-  }
+.userlist-form{
+  width: 100px;
+  height: 455px;
+  background-color: #A569BD;
+  margin-left: 0px; 
+}
+.chat-form{
+  padding-left: 150px; 
+  margin-top: -35em;
+  margin-left: -2em;
+}
 
-  .userlist-form{
-    width: 100px;
-    height: 600px;
-    background-color: #A569BD;
-    margin-left: 0px; 
-  }
+#Logout{
+  display: inline-block;
+  position: absolute;
+  margin-top: 360px;
+  margin-left: -35px;
+}
 
-  .chat-form{
-    padding-left: 150px; 
-    margin-top: -35em;
-    margin-left: -2em;
-    
-  }
-  #par{
-    width:99px; 
-    font-size:20px;
-    margin: auto;
-    display: inline-block;
-    position: absolute;
-    background-color : #05ffb0;
-    border-radius: 5px; 
-    border: 2px solid gray;
-    text-align:center;
-  }
+#par{
+  width:99px; 
+  font-size:20px;
+  margin-top: 5px;
+  display: inline-block;
+  position: absolute;
+  background-color : #05ffb0;
+  border-radius: 5px; 
+  border: 2px solid gray;
+  text-align:center;
+}
 
-  #fl {
-    font-size:  140px;
-    white-space: nowrap;
-    color: black;
-  }
-  
-  #sl {
-    font-size:  90px;
-    white-space: nowrap;
-    color: black;
-  }
-  
-  .profile-img {
-    text-align: center;
-  }
-  
-  .profile-img img {
-    border-radius: 50%;
-    /* animation: mymove 2s infinite; */
-  }
-  
-  @keyframes mymove {
-    from {border: 1px solid #F2F3F4;}
-    to {border: 8px solid #F2F3F4;}
-  }
-  
-  .login-form {
-    padding: 15px;
-  }
-  
-  .login-form h3 {
-    text-align: left;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  
-  .form-control {
-    font-size: 14px;
-  }
-  
-  .forget-password a {
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 14px;
-  }
+.profile-img {
+  text-align: center;
+}
+
+.profile-img img {
+  border-radius: 50%;
+  /* animation: mymove 2s infinite; */
+}
+
+@keyframes mymove {
+  from {border: 1px solid #F2F3F4;}
+  to {border: 8px solid #F2F3F4;}
+}
+
+.login-form {
+  padding: 15px;
+}
+
+.login-form h3 {
+  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.form-control {
+  font-size: 14px;
+}
+
+.forget-password a {
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+}
 
 
-  #chatLog{
-    word-break: break-all;
-    width: 580px;
-    height: 450px;
-    /*font-size: 12px;  
-    margin: auto;
-    margin-left: 230px; 
-    margin-right: 25px;  
-    background-color: lemonchiffon;
-    border-radius: 5px; 
-    margin-top: 10px; 
-    border: 2px solid gray;
-    text-align: left; */
-  }
-  #other{
-    word-break: break-all;
-    overflow: hidden;
+#chatLog{
+  word-break: break-all;
+  width: 580px;
+  height: 320px;
+  overflow-y: auto;
+  /*font-size: 12px;  
+  margin: auto;
+  margin-left: 230px; 
+  margin-right: 25px;  
+  background-color: lemonchiffon;
+  border-radius: 5px; 
+  margin-top: 10px; 
+  border: 2px solid gray;
+  text-align: left; */
+}
+#other{
+  word-break: break-all;
+  overflow: hidden;
 
-    /*font-size: 12px;
-    margin: auto;
-    margin-left: 25px; 
-    margin-right: 230px;
-    background-color: white;
-    border-radius: 5px;
-    margin-top: 10px;
-    border: 2px solid gray;
-    text-align: left;*/
+  /*font-size: 12px;
+  margin: auto;
+  margin-left: 25px; 
+  margin-right: 230px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: 2px solid gray;
+  text-align: left;*/
 
-  }
+}
 
-  #connect {
-    width: 100px;
-    word-break: break-word;
-    display: inline-block;
-    position: absolute;
-    font-size:15px; 
-    background-color: aquamarine;
-    text-align: center;
-    border-radius: 5px; 
-    border: 2px solid gray;
-    overflow-y: auto;
-    max-height: 600px;
-    margin-top:30px; 
-  }
+#connect {
+  width: 100px;
+  word-break: break-word;
+  display: inline-block;
+  position: absolute;
+  font-size:15px; 
+  background-color: aquamarine;
+  text-align: center;
+  border-radius: 5px; 
+  border: 2px solid gray;
+  overflow-y: auto;
+  max-height: 600px;
+  margin-top:30px;
+}
 
-/* 접속 종료 알림 */
-  #disconnect {
-    margin: auto;
-    background-color: indianred;
-    text-align: center;
-    margin-top: 10px;
-    border-radius: 5px; 
-    border: 2px solid gray;
-  }
-
-  #myForm{
-    width:auto;
-  }
-  
+#myForm{
+  width: auto;
+}
