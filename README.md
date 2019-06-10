@@ -27,3 +27,10 @@ npm run build
 cd Owl-darwin-x64 //(build된 경로로 이동)
 ./Owl
 ~~~
+
+## License
+GPL V2
+
+## Image resource 
+[https://pixabay.com/ko/](https://pixabay.com/ko/)
+사용자는 어떠한 허가 요청이나 지불 없이 상업적/비상업적 목적으로 이미지를 복사, 수정, 배포 및 이용할 수 있습니다. 그러나 컨텐츠는 상표, 광고, 개인정보보호 권리에 따라 보호될 수 있습니다.
