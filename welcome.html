@@ -1,0 +1,43 @@
+</DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome page</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css"/>
+    </head>
+    <body>
+        <div class="container login-container" >
+            <div class="row"  style = "height: 100%;">
+                <div class="container userlist-form"></div>
+                    <div id="par"><h4> 현재 참여자 <style>h4 {font-family: 'Nanum Pen Script', cursive;}</style> </h4> 
+                        <audio id = 'in' src = 'https://raw.githubusercontent.com/zzangjames/chatting_web_app/master/views/login.mp3'></audio>
+                        <audio id = 'out' src = 'https://raw.githubusercontent.com/zzangjames/chatting_web_app/master/views/logout.mp3'></audio>
+                        <form id ="Logout" action = "/./" method = "GET">
+                            <input type="submit" class="btn" value="Logout">
+                        </form>
+                    </div>
+                    <div id="connect" ></div>
+                    
+                <div class="container chat-form" > 
+                    <h3 style="margin-top:123px;">Welcome, <%= username %></h3>
+                    <hr style="border: solid 1px violet">  
+                    <div id="chatLog" style="size:100%; overflow-y: auto;"></div>
+                        <form id="myForm">
+                            <input id="msgForm" type="text" value="" placeholder="메시지를 입력해주세요.." style="width: 460px;">
+                            <button style= "width: 60px; height: 35px;font-size:18px;background:gold;" type="submit">전송</button>             
+                        </form>
+                </div>
+            </div>
+        </div>
+                 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="javascript/chat.js"></script>
+        <script type="text/javascript">
+            username = '<%= username %>';
+        </script>
+    </body>
+</html>
