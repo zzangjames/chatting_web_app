@@ -25,7 +25,7 @@ cd chatting_web_app //(클론한 해당 경로로 이동)
 npm i 
 npm run build
 cd Owl-darwin-x64 //(build된 경로로 이동)
-./Owl
+./Owl //(리눅스 기준) open Owl.app(맥 기준) 즉, 생성된 Owl app 실행
 ~~~
 
 ## License
