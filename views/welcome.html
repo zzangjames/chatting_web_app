@@ -13,6 +13,8 @@
             <div class="row"  style = "height: 100%;">
                 <div class="container userlist-form"></div>
                     <div id="par"><h4> 현재 참여자 <style>h4 {font-family: 'Nanum Pen Script', cursive;}</style> </h4> 
+                        <audio id = 'in' src = 'https://raw.githubusercontent.com/zzangjames/chatting_web_app/master/views/login.mp3'></audio>
+                        <audio id = 'out' src = 'https://raw.githubusercontent.com/zzangjames/chatting_web_app/master/views/logout.mp3'></audio>
                         <form id ="Logout" action = "/./" method = "GET">
                             <input type="submit" class="btn" value="Logout">
                         </form>
@@ -23,14 +25,8 @@
                     <h3 style="margin-top:123px;">Welcome, <%= username %></h3>
                     <hr style="border: solid 1px violet">  
                     <div id="chatLog" style="size:100%; overflow-y: auto;"></div>
-                        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-                        <script>
-                            $("#chatLog").scrollTop($("#chatLog").height());
-                            return false;
-                        </script>
-
                         <form id="myForm">
-                            <input id="msgForm" type="text" value="" placeholder="메시지를 입력해주세요.." style="width: 300px;">
+                            <input id="msgForm" type="text" value="" placeholder="메시지를 입력해주세요.." style="width: 460px;">
                             <button style= "width: 60px; height: 35px;font-size:18px;background:gold;" type="submit">전송</button>             
                         </form>
                 </div>
