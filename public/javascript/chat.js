@@ -1,5 +1,3 @@
-var clients = new Array();
-clients ={};
 $(function(){
     var socket = io();
 
@@ -8,9 +6,13 @@ $(function(){
 
     socket.on("login", function (data){
         $("#chatLog").append("<li><strong>" + data + "</strong> has entered</li>");
+        document.getElementById('in').play();
+        $("#chatLog").scrollTop($("#chatLog").height()+10000000);
     });
     socket.on("logout", function (data){
         $("#chatLog").append("<li><strong>" + data + "</strong> has exited</li>");
+        document.getElementById('out').play();
+        $("#chatLog").scrollTop($("#chatLog").height()+10000000);
     });
     socket.on("userlist",function(data){
         $("#connect").empty();
@@ -22,6 +24,7 @@ $(function(){
     socket.on("chat", function (data){
         var date = new Date();
         $("#chatLog").append("<li><strong>" + data.username + "</strong>: " + data.msg + " ("+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+")</li>");
+        $("#chatLog").scrollTop($("#chatLog").height()+10000000);
     });
     $("#myForm").submit(function(e){
         e.preventDefault();
